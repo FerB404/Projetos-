@@ -1,0 +1,16 @@
+#criar lista de funcionarios que trabalham durante o dia e tenha carro, a noite e tenha carro, quem nao tem carro 
+
+
+funcionarios = ["Ana", "Carlos", "Alice", "Pedro", "Sophia", "Bruno", "Melissa"]
+turnodia = ["Ana", "Carlos", "Alice", "Melissa"]
+turnonoite = ["Pedro", "Sophia", "Bruno"]
+temcarro = ["Marcos", "Alice", "Bruno"]
+
+list1 = set(temcarro).intersection(turnonoite)
+print(list1)
+
+list2 = set(temcarro).intersection(turnodia)
+print(list2)
+
+list3 = set(temcarro).intersection(temcarro)
+print(list3)
