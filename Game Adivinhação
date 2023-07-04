@@ -1,0 +1,49 @@
+import random
+import colorama
+from colorama import Fore
+
+colorama.init()
+
+a = 0
+name = input("Digite seu nome: ")
+
+while name.isnumeric():
+    name = input("Digite seu nome:")
+
+else:
+    print("\nSEJA BEM VINDO " + Fore.BLUE + f"{name.upper()}!" + Fore.RESET + "\n\nPara ganhar, terá que" + Fore.GREEN + " acertar o número " + Fore.RESET + "exato que será sorteado, para isso terá" + Fore.RED + " 3 " + Fore.RESET + "tentativas." + Fore.BLUE + " BOA SORTE!\n" + Fore.RESET)
+
+number_sorte = None
+while True:
+    number_sorte = input("Digite um número máximo até 50 para jogar: ")
+    if number_sorte.isnumeric() and 0 <= int(number_sorte) <= 50:
+        break
+    else:
+        print("\nInválido! Digite um número entre 0 e 50.")
+
+num = 0
+random_number = random.randint(0, int(number_sorte))
+
+while True:
+    num = input('\nAdivinhe o número sorteado: ')
+    if not num.isnumeric():
+        print("\nEntrada inválida! Digite apenas números.")
+        continue
+
+    num = int(num)
+    if num < 0 or num > int(number_sorte):
+        print("\nNúmero fora do intervalo válido! Tente novamente.")
+        continue
+
+    if num < random_number:
+        print("\nValor baixo.")
+        a += 1
+    elif num > random_number:
+        print("\nValor alto.")
+        a += 1
+    elif a == 3:
+        print("\n3 tentativas excedidas, tente novamente.")
+        break
+    else:
+        print("Parabéns! Número correto:", num)
+        break
