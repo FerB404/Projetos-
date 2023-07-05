@@ -4,7 +4,7 @@ from colorama import Fore
 
 colorama.init()
 
-a = 0
+a = 1
 name = input("Digite seu nome: ")
 
 while name.isnumeric():
@@ -35,15 +35,16 @@ while True:
         print("\nNúmero fora do intervalo válido! Tente novamente.")
         continue
 
-    if num < random_number:
+    if num < random_number and a<3:
         print("\nValor baixo.")
         a += 1
-    elif num > random_number:
+    elif num > random_number and a<3:
         print("\nValor alto.")
         a += 1
     elif a == 3:
         print("\n3 tentativas excedidas, tente novamente.")
         break
+      
     else:
         print("Parabéns! Número correto:", num)
         break
