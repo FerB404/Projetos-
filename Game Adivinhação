@@ -3,6 +3,15 @@ import colorama
 from colorama import Fore
 
 colorama.init()
+print("XXXXXXXXXXXXX"+"  XXXXXXXXXXXXX"+"  XXX       XXX"+"  XXXXXXXXXXXXX") 
+print("XXX          "+"  XXX       XXX"+"  XXXX     XXXX"+"  XXX        XX")
+print("XXX          "+"  XXX       XXX"+"  XX  XXXXX  XX"+"  XXX       XX")
+print("XXX      XXXX"+"  XXXXXXXXXXXXX"+"  XX   XXX   XX"+"  XXXXXXXXXXX  ")
+print("XXX        XX"+"  XXX       XXX"+"  XX         XX"+"    XXX        ")
+print("XXXXXXXXXXXXX"+"  XXX       XXX"+"  XX         XX"+"     XXXXXXXXXX\n")
+
+
+print( Fore.RED + "PRA COMEÇAR DIGITE O SEU NOME:\n " + Fore.RESET)
 
 a = 1
 name = input("Digite seu nome: ")
